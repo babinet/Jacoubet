@@ -69,14 +69,14 @@ done
 }
 
 # Declare the array
-Menu=('GeoRefEdmeVeniquet' 'util' )
+Menu=('GeoRefJacoubet' 'util' )
 
 # menu
 menu_from_array "${Menu[@]}"
 
-if [ $item.sh = GeoRefEdmeVeniquet.sh ]
+if [ $item.sh = GeoRefJacoubet.sh ]
 then
-./GeoRefEdmeVeniquet.sh
+./GeoRefJacoubet.sh
 fi
 
 if [ $item.sh = util.sh ]
