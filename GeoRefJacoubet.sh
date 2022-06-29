@@ -182,16 +182,16 @@ OriginXValeur=-1000
 OriginYValeur=1800
 elif [[ "$PlancheNumero" == "28" ]]
 then
-OriginXValeur=-400
-OriginYValeur=1800
+OriginXValeur=-4000
+OriginYValeur=2500
 elif [[ "$PlancheNumero" == "29" ]]
 then
-OriginXValeur=200
-OriginYValeur=1800
+OriginXValeur=-3000
+OriginYValeur=2500
 elif [[ "$PlancheNumero" == "30" ]]
 then
-OriginXValeur=800
-OriginYValeur=1800
+OriginXValeur=-2000
+OriginYValeur=2500
 elif [[ "$PlancheNumero" == "31" ]]
 then
 OriginXValeur=-1000
