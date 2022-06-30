@@ -82,24 +82,29 @@ OriginXValeur=-1600
 OriginYValeur=3000
 elif [[ "$PlancheNumero" == "3" ]]
 then
-OriginXValeur=-1000
-OriginYValeur=3000
+Hauteur=1000
+OriginXValeur=-2000
+OriginYValeur=6000
 elif [[ "$PlancheNumero" == "4" ]]
 then
-OriginXValeur=-400
-OriginYValeur=3000
+Hauteur=1000
+OriginXValeur=-1000
+OriginYValeur=6000
 elif [[ "$PlancheNumero" == "5" ]]
 then
-OriginXValeur=200
-OriginYValeur=3000
+Hauteur=1000
+OriginXValeur=0
+OriginYValeur=6000
 elif [[ "$PlancheNumero" == "6" ]]
 then
-OriginXValeur=800
-OriginYValeur=3000
+Hauteur=1000
+OriginXValeur=1000
+OriginYValeur=6000
 elif [[ "$PlancheNumero" == "7" ]]
 then
-OriginXValeur=1400
-OriginYValeur=3000
+Hauteur=1000
+OriginXValeur=2000
+OriginYValeur=6000
 elif [[ "$PlancheNumero" == "8" ]]
 then
 OriginXValeur=2000
@@ -110,40 +115,40 @@ OriginXValeur=-2000
 OriginYValeur=2600
 elif [[ "$PlancheNumero" == "10" ]]
 then
-OriginXValeur=-1600
-OriginYValeur=2600
+OriginXValeur=-4000
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "11" ]]
 then
-OriginXValeur=-1000
-OriginYValeur=2600
+OriginXValeur=-3000
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "12" ]]
 then
-OriginXValeur=-400
-OriginYValeur=2600
+OriginXValeur=-2000
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "13" ]]
 then
-OriginXValeur=200
-OriginYValeur=2600
+OriginXValeur=-1000
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "14" ]]
 then
-OriginXValeur=800
-OriginYValeur=2600
+OriginXValeur=0
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "15" ]]
 then
-OriginXValeur=1400
-OriginYValeur=2600
+OriginXValeur=1000
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "16" ]]
 then
 OriginXValeur=2000
-OriginYValeur=2600
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "17" ]]
 then
-OriginXValeur=-2000
-OriginYValeur=2200
+OriginXValeur=3000
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "18" ]]
 then
-OriginXValeur=-3000
-OriginYValeur=2200
+OriginXValeur=4000
+OriginYValeur=5000
 elif [[ "$PlancheNumero" == "19" ]]
 then
 OriginXValeur=-4000
@@ -158,28 +163,28 @@ OriginXValeur=-2000
 OriginYValeur=3750
 elif [[ "$PlancheNumero" == "22" ]]
 then
-OriginXValeur=800
-OriginYValeur=2200
+OriginXValeur=-1000
+OriginYValeur=3750
 elif [[ "$PlancheNumero" == "23" ]]
 then
-OriginXValeur=1400
-OriginYValeur=2200
+OriginXValeur=0
+OriginYValeur=3750
 elif [[ "$PlancheNumero" == "24" ]]
 then
-OriginXValeur=2000
-OriginYValeur=2200
+OriginXValeur=1000
+OriginYValeur=3750
 elif [[ "$PlancheNumero" == "25" ]]
 then
-OriginXValeur=-2000
-OriginYValeur=1800
+OriginXValeur=2000
+OriginYValeur=3750
 elif [[ "$PlancheNumero" == "26" ]]
 then
-OriginXValeur=-1600
-OriginYValeur=1800
+OriginXValeur=3000
+OriginYValeur=3750
 elif [[ "$PlancheNumero" == "27" ]]
 then
-OriginXValeur=-1000
-OriginYValeur=1800
+OriginXValeur=4000
+OriginYValeur=3750
 elif [[ "$PlancheNumero" == "28" ]]
 then
 OriginXValeur=-4000
@@ -228,6 +233,11 @@ elif [[ "$PlancheNumero" == "39" ]]
 then
 OriginXValeur=-2000
 OriginYValeur=1250
+elif [[ "$PlancheNumero" == "39A" ]]
+then
+Hauteur=500
+OriginXValeur=-2000
+OriginYValeur=0
 elif [[ "$PlancheNumero" == "40" ]]
 then
 Hauteur=1500
@@ -247,6 +257,11 @@ elif [[ "$PlancheNumero" == "43" ]]
 then
 OriginXValeur=2000
 OriginYValeur=1250
+elif [[ "$PlancheNumero" == "43A" ]]
+then
+Hauteur=500
+OriginXValeur=2000
+OriginYValeur=0
 elif [[ "$PlancheNumero" == "44" ]]
 then
 OriginXValeur=3000
@@ -255,30 +270,19 @@ elif [[ "$PlancheNumero" == "45" ]]
 then
 OriginXValeur=4000
 OriginYValeur=1250
-elif [[ "$PlancheNumero" == "46" ]]
-then
-OriginXValeur=800
-OriginYValeur=1000
-elif [[ "$PlancheNumero" == "47" ]]
-then
-OriginXValeur=1400
-OriginYValeur=1000
-elif [[ "$PlancheNumero" == "48" ]]
-then
-OriginXValeur=2000
-OriginYValeur=1000
 elif [[ "$PlancheNumero" == "49" ]]
 then
-OriginXValeur=-2000
-OriginYValeur=600
+OriginXValeur=-1000
+OriginYValeur=250
 elif [[ "$PlancheNumero" == "50" ]]
 then
-OriginXValeur=-1600
-OriginYValeur=600
+OriginXValeur=0
+OriginYValeur=250
 elif [[ "$PlancheNumero" == "51" ]]
 then
-OriginXValeur=-1000
-OriginYValeur=600
+Hauteur=1000
+OriginXValeur=1000
+OriginYValeur=0
 elif [[ "$PlancheNumero" == "52" ]]
 then
 OriginXValeur=-400
