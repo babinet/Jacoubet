@@ -36,7 +36,7 @@ select ext; do
 if [ 1 -le "$REPLY" ] && [ "$REPLY" -le $# ];
 
 then
-echo "Extenssion = "$ext""
+echo "Extension = "$ext""
 break;
 else
 echo "Erreur - Choisir parmis 1-$#"
@@ -53,27 +53,27 @@ menu_from_array "${Menu[@]}"
 
 if [ "$ext" == tiff ]
 then
-echo ."$ext" > extenssion_de_fichier
+echo ."$ext" > extension_de_fichier
 fi
 if [ "$ext" == tif ]
 then
-echo ."$ext" > extenssion_de_fichier
+echo ."$ext" > extension_de_fichier
 fi
 if [ "$ext" == jpg ]
 then
-echo ."$ext" > extenssion_de_fichier
+echo ."$ext" > extension_de_fichier
 fi
 if [ "$ext" == TIFF ]
 then
-echo ."$ext" > extenssion_de_fichier
+echo ."$ext" > extension_de_fichier
 fi
 if [ "$ext" == targa ]
 then
-echo ."$ext" > extenssion_de_fichier
+echo ."$ext" > extension_de_fichier
 fi
 if [ "$ext" == psd ]
 then
-echo ."$ext" > extenssion_de_fichier
+echo ."$ext" > extension_de_fichier
 fi
 
 cd - 2>&1 &>/dev/null

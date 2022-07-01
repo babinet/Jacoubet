@@ -29,15 +29,15 @@ cd -P -- "$(dirname -- "$0")" && pwd -P
 cd "$dir" 2>&1 &>/dev/null
 mkdir -p ../_Output ../_TRASH_TEMP ../_Done_Sources
 
-if [ -f extenssion_de_fichier ]
+if [ -f extension_de_fichier ]
 then
-ext=$(cat extenssion_de_fichier)
-echo "${white}---> Fichier_extenssion${green}ext = ${orange}$ext"
+ext=$(cat extension_de_fichier)
+echo "${white}---> Fichier_extension${green}ext = ${orange}$ext"
 else
 echo "${red}---> Choisir le type de fichier image${reset}"
 ./util.sh
-ext=$(cat extenssion_de_fichier)
-echo "${white}---> Fichier_extenssion${green}ext = ${orange}$ext"
+ext=$(cat extension_de_fichier)
+echo "${white}---> Fichier_extension${green}ext = ${orange}$ext"
 fi
 # Metres
 #
@@ -72,14 +72,18 @@ Hauteur=1250
 echo "${white}---> \$planche                     ${orange}$planche"
 echo "${white}---> Planche N°                   ${orange}$PlancheNumero"
 # Abscissa / Ordinate
-if [[ "$PlancheNumero" == "1" ]]
+if [[ "$PlancheNumero" == "1_2" ]]
 then
+Hauteur=1250
+Largeur=2000
+OriginXValeur=-4000
+OriginYValeur=6250
+elif [[ "$PlancheNumero" == "Titre" ]]
+then
+Hauteur=500
+Largeur=5000
 OriginXValeur=-2000
-OriginYValeur=3000
-elif [[ "$PlancheNumero" == "2" ]]
-then
-OriginXValeur=-1600
-OriginYValeur=3000
+OriginYValeur=6500
 elif [[ "$PlancheNumero" == "3" ]]
 then
 Hauteur=1000
@@ -105,14 +109,12 @@ then
 Hauteur=1000
 OriginXValeur=2000
 OriginYValeur=6000
-elif [[ "$PlancheNumero" == "8" ]]
+elif [[ "$PlancheNumero" == "8_9" ]]
 then
-OriginXValeur=2000
-OriginYValeur=3000
-elif [[ "$PlancheNumero" == "9" ]]
-then
-OriginXValeur=-2000
-OriginYValeur=2600
+Hauteur=1250
+Largeur=2000
+OriginXValeur=3000
+OriginYValeur=6250
 elif [[ "$PlancheNumero" == "10" ]]
 then
 OriginXValeur=-4000
@@ -274,6 +276,12 @@ elif [[ "$PlancheNumero" == "49" ]]
 then
 OriginXValeur=-1000
 OriginYValeur=250
+elif [[ "$PlancheNumero" == "49_51_Titre_Bas" ]]
+then
+Hauteur=500
+Largeur=3000
+OriginXValeur=-1000
+OriginYValeur=-1000
 elif [[ "$PlancheNumero" == "50" ]]
 then
 OriginXValeur=0
