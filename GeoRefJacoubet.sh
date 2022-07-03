@@ -78,6 +78,18 @@ Hauteur=1250
 Largeur=2000
 OriginXValeur=-4000
 OriginYValeur=6250
+elif [[ "$PlancheNumero" == "regle_gauche_29_carreaux" ]]
+then
+Hauteur=7250
+Largeur=250
+OriginXValeur=-4250
+OriginYValeur=6000
+elif [[ "$PlancheNumero" == "regle_droite_29_carreaux" ]]
+then
+Hauteur=7250
+Largeur=250
+OriginXValeur=5000
+OriginYValeur=6000
 elif [[ "$PlancheNumero" == "Titre" ]]
 then
 Hauteur=500
@@ -221,7 +233,7 @@ OriginXValeur=3000
 OriginYValeur=2500
 elif [[ "$PlancheNumero" == "36" ]]
 then
-OriginXValeur=-400
+OriginXValeur=4000
 OriginYValeur=2500
 elif [[ "$PlancheNumero" == "37" ]]
 then
@@ -272,6 +284,17 @@ elif [[ "$PlancheNumero" == "45" ]]
 then
 OriginXValeur=4000
 OriginYValeur=1250
+elif [[ "$PlancheNumero" == "46_47" ]]
+then
+Hauteur=1500
+Largeur=2000
+OriginXValeur=-4000
+OriginYValeur=0
+elif [[ "$PlancheNumero" == "48" ]]
+then
+Hauteur=1000
+OriginXValeur=-2000
+OriginYValeur=-500
 elif [[ "$PlancheNumero" == "49" ]]
 then
 OriginXValeur=-1000
@@ -293,88 +316,15 @@ OriginXValeur=1000
 OriginYValeur=0
 elif [[ "$PlancheNumero" == "52" ]]
 then
-OriginXValeur=-400
-OriginYValeur=600
-elif [[ "$PlancheNumero" == "53" ]]
-then
-OriginXValeur=200
-OriginYValeur=600
-elif [[ "$PlancheNumero" == "54" ]]
-then
-OriginXValeur=800
-OriginYValeur=600
-elif [[ "$PlancheNumero" == "55" ]]
-then
-OriginXValeur=1400
-OriginYValeur=600
-elif [[ "$PlancheNumero" == "56" ]]
-then
+Hauteur=1000
 OriginXValeur=2000
-OriginYValeur=600
-elif [[ "$PlancheNumero" == "57" ]]
+OriginYValeur=-500
+elif [[ "$PlancheNumero" == "53_54" ]]
 then
-OriginXValeur=-2000
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "58" ]]
-then
-OriginXValeur=-1600
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "59" ]]
-then
-OriginXValeur=-1000
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "60" ]]
-then
-OriginXValeur=-400
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "61" ]]
-then
-OriginXValeur=200
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "62" ]]
-then
-OriginXValeur=800
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "63" ]]
-then
-OriginXValeur=1400
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "64" ]]
-then
-OriginXValeur=2000
-OriginYValeur=200
-elif [[ "$PlancheNumero" == "65" ]]
-then
-OriginXValeur=-2000
-OriginYValeur=-200
-elif [[ "$PlancheNumero" == "66" ]]
-then
-OriginXValeur=-1600
-OriginYValeur=-200
-elif [[ "$PlancheNumero" == "67" ]]
-then
-OriginXValeur=-1000
-OriginYValeur=-200
-elif [[ "$PlancheNumero" == "68" ]]
-then
-OriginXValeur=-400
-OriginYValeur=-200
-elif [[ "$PlancheNumero" == "69" ]]
-then
-OriginXValeur=200
-OriginYValeur=-200
-elif [[ "$PlancheNumero" == "70" ]]
-then
-OriginXValeur=800
-OriginYValeur=-200
-elif [[ "$PlancheNumero" == "71" ]]
-then
-OriginXValeur=1400
-OriginYValeur=-200
-elif [[ "$PlancheNumero" == "72" ]]
-then
-OriginXValeur=2000
-OriginYValeur=-200
+Largeur=2000
+Hauteur=1500
+OriginXValeur=3000
+OriginYValeur=0
 fi
 if [[ "OriginYValeur" -gt "1" ]]
 then
@@ -401,12 +351,12 @@ echo "${white}---> \$Est                         ${orange}$Est"
 echo "${white}---> \$Sud                         ${orange}$Sud${reset}"
 gdal_translate -co COMPRESS=NONE -co ALPHA="YES" -a_srs EPSG:27561 -of GTiff -gcp 0 0 "$OrigineMetresX" "$OrigineMetresY" -gcp 0 "$HeightImage" "$OrigineMetresX" "$Sud" -gcp "$WidthImage" 0 "$Est" "$OrigineMetresY" -gcp "$WidthImage" "$HeightImage" "$Est" "$Sud" "$planche" temp.tif
 
-if [ -f "../_Output/"$SimpleName".tif" ]
+if [ -f "../_Output/TH_Jacoubet_"$SimpleName".tif" ]
 then
-mv "../_Output/"$SimpleName".tif" ../_TRASH_TEMP/"$FileDate"_"$SimpleName".tif
+mv "../_Output/TH_Jacoubet_"$SimpleName".tif" ../_TRASH_TEMP/"$FileDate"_TH_Jacoubet_"$SimpleName".tif
 fi
-gdalwarp -co COMPRESS=NONE -r bilinear -s_srs "EPSG:27561" -t_srs "EPSG:3857"  temp.tif "../_Output/"$SimpleName".tif"
-gdaladdo -r average "../_Output/"$SimpleName".tif" 2 4 8 16
+gdalwarp -co COMPRESS=NONE -r bilinear -s_srs "EPSG:27561" -t_srs "EPSG:3857"  temp.tif "../_Output/TH_Jacoubet_"$SimpleName".tif"
+gdaladdo -r average "../_Output/TH_Jacoubet_"$SimpleName".tif" 2 4 8 16
 mv "$planche" ../_Done_Sources
 done
 if [ -f temp.tif ]
